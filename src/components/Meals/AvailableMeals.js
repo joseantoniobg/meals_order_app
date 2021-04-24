@@ -13,6 +13,10 @@ const AvailableMeals = () => {
       setLoading(true);
       const response = await fetch("URL");
 
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+
       const data = await response.json();
       const loadedMeals = [];
 

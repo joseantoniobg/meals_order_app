@@ -78,4 +78,4 @@ const CartProvider = (props) => {
   );
 };
 
-export default CartProvider;
+export default React.memo(CartProvider);
